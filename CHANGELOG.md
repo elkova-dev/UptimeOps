@@ -14,3 +14,11 @@
 ## 0.1.0 - 2026-10-29
 
 - Local HTTP/HTTPS endpoint monitoring, background checks, dashboard and theme selection.
+
+## v1.0.1 - cross-platform verification and correctness patch
+
+- Fix: HTTP 3xx redirects no longer count as operational when redirect following is disabled.
+- Tests: add regression cases for HTTP 301, 302, 307 and 308.
+- CI: add explicit Windows/macOS/Linux test matrix and fail early if source folders are missing.
+- Dependencies: declare Pydantic 2 explicitly because application uses v2 validators.
+- Scope: local-first portfolio application; no public deployment hardening is implied.

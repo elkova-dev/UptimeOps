@@ -42,7 +42,7 @@ def validate_target(url: str) -> None:
 
 async def probe(url: str, client: httpx.AsyncClient | None = None, *, contract_enabled: bool = False,
                 contract_path: str = '', contract_operator: str = 'equals', contract_expected: str = '') -> dict[str, Any]:
-    """Perform GET with no redirects, response size cap and optional JSON assertion."""
+    """Perform GET with no redirects, requiring 2xx and optional JSON assertion."""
     started = time.perf_counter()
     own_client = client is None
     if own_client:
@@ -55,7 +55,7 @@ async def probe(url: str, client: httpx.AsyncClient | None = None, *, contract_e
         async with client.stream('GET', url, follow_redirects=False) as response:
             latency_ms = int((time.perf_counter() - started) * 1000)
             code = response.status_code
-            if code < 200 or code >= 400:
+            if code < 200 or code >= 300:
                 return {'status':'down', 'latency_ms':latency_ms, 'http_code':code, 'error':f'HTTP {code}', 'failure_type':'http'}
             if contract_enabled:
                 content = bytearray()
