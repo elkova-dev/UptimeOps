@@ -1,0 +1,10 @@
+services:
+  uptimeops:
+    build: .
+    ports:
+      - "127.0.0.1:8002:8002"
+    volumes:
+      - uptimeops-data:/app/data
+    restart: unless-stopped
+volumes:
+  uptimeops-data:
