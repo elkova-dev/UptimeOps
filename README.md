@@ -42,7 +42,7 @@ This is a portfolio demonstration of a known monitoring technique, **not a claim
 
 Install **Python 3.11 or newer** (Python 3.13 works). Then:
 
-1. Extract the ZIP file.
+1. Download the repository as a ZIP or clone it to your computer.    
 2. Double-click **`RUN_ME_WINDOWS.bat`** in the project root.
 3. Wait for dependency installation and server startup.
 4. Open **http://127.0.0.1:8002**.
@@ -147,8 +147,8 @@ Open **http://127.0.0.1:8002/docs** for auto-generated OpenAPI documentation.
 - [docs/QUICKSTART_RU.md](docs/QUICKSTART_RU.md) contains Windows setup and testing steps in Russian.
 - Source includes no API keys, passwords or connection secrets.
 
-**License:** MIT. Before publishing on GitHub, replace the project author information in your GitHub profile and verify that the license choice fits your goals.
+**License:** MIT. See [LICENSE](LICENSE) for details
 
 ## Cross-platform verification
 
-The `.github/workflows/cross-platform.yml` workflow runs automated tests on Windows, Ubuntu Linux and macOS using Python 3.12. It checks for required application files first, preventing false failures caused by incomplete repository uploads. The matrix tests are not a substitute for manual GUI testing on each OS.
+The `.github/workflows/main.yml` workflow runs automated tests on Windows, Ubuntu Linux and macOS using Python 3.12. It checks for required application files first, preventing false failures caused by incomplete repository uploads. The matrix tests are not a substitute for manual GUI testing on each OS.
