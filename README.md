@@ -146,7 +146,6 @@ Open **http://127.0.0.1:8002/docs** for auto-generated OpenAPI documentation.
 - [CHANGELOG.md](CHANGELOG.md) lists actual release improvements.
 - [docs/QUICKSTART_RU.md](docs/QUICKSTART_RU.md) contains Windows setup and testing steps in Russian.
 - Source includes no API keys, passwords or connection secrets.
-- AI assistance: ChatGPT contributed substantial portions of implementation, tests, documentation and UI. This contribution should be disclosed accurately in portfolio discussions; review and understand the code, and make real incremental commits rather than fabricating Git history.
 
 **License:** MIT. Before publishing on GitHub, replace the project author information in your GitHub profile and verify that the license choice fits your goals.
 
