@@ -152,5 +152,3 @@ Open **http://127.0.0.1:8002/docs** for auto-generated OpenAPI documentation.
 ## Cross-platform verification
 
 The `.github/workflows/cross-platform.yml` workflow runs automated tests on Windows, Ubuntu Linux and macOS using Python 3.12. It checks for required application files first, preventing false failures caused by incomplete repository uploads. The matrix tests are not a substitute for manual GUI testing on each OS.
-
-For an existing GitHub repository, upload the **contents** of the `UptimeOps/` directory (not the ZIP archive as a file). Ensure the `src/`, `frontend/`, and `tests/` folders are present in the repository root. Remove the obsolete `.github/workflows/python-tests.yml` if it remains to avoid duplicate workflows.
